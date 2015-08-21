@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<html ng-app="appleApp">
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "bootstrap/dist/css/bootstrap.css" %}">
+</head>
+<body>
+<!-- Loop over all apples -->
+<div class="content" ng-controller="{% block ng_controller %}AppleListCtrl{% endblock %}">
+{% block content %}
+    {% verbatim %}
+        <div class="panel" ng-repeat="apple in apples">
+            <div class="panel-heading clearfix">
+                <h3 class="panel-title">{{ apple.color }}</h3>
+                <author class="pull-right">{{ apple.size }}</author>
+            </div>        
+        </div>
+    {% endverbatim %}
+{% endblock %}</div>
+
+
+<script src="{% static "underscore/underscore.js" %}"></script>
+<script src="{% static "angular/angular.js" %}"></script>
+<script src="{% static "angular-resource/angular-resource.js" %}"></script>
+<script src="{% static "js/app.js" %}"></script>
+<script src="{% static "js/services.js" %}"></script>
+<script src="{% static "js/controllers.js" %}"></script>
+</body>
+</html>

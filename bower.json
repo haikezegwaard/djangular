@@ -1,0 +1,22 @@
+{
+  "name": "djangular",
+  "version": "0.0.0",
+  "authors": [
+    "haike zegwaard <hz@fundament.nl>"
+  ],
+  "description": "django angularjs test",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "underscore": "~1.8.3",
+    "bootstrap": "~3.3.5",
+    "angular-resource": "~1.4.4"
+  }
+}
